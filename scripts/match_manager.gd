@@ -55,3 +55,4 @@ func spawn_pogoers() -> void:
 	p2.position = Vector2(600, 200)
 	p2.init(2, true)
 	add_child(p2)
+	p2.visible = false
