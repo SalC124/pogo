@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://c75onua1yr7y4"]
 
-[ext_resource type="Texture2D" uid="uid://bkkwmafd20530" path="res://assets/Verity.png" id="1_kr2ts"]
-[ext_resource type="Script" uid="uid://chnymacvtn3bd" path="res://scripts/player.gd" id="1_q88xf"]
-[ext_resource type="Script" uid="uid://mr881m4std3" path="res://scripts/guy.gd" id="2_665sb"]
-[ext_resource type="Texture2D" uid="uid://dwdb0b6u4ymr2" path="res://assets/Stick.png" id="2_q88xf"]
+[ext_resource type="Script" uid="uid://chnymacvtn3bd" path="res://scripts/pogoer.gd" id="1_cwepv"]
+[ext_resource type="Script" uid="uid://mr881m4std3" path="res://scripts/guy.gd" id="2_8tnvx"]
+[ext_resource type="Texture2D" uid="uid://bkkwmafd20530" path="res://assets/Verity.png" id="3_5m2sa"]
+[ext_resource type="Texture2D" uid="uid://dwdb0b6u4ymr2" path="res://assets/Stick.png" id="4_hubrf"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gwosq"]
 radius = 4.0
@@ -12,16 +12,16 @@ height = 34.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_gwosq"]
 radius = 13.038404
 
-[node name="Player" type="Node2D" unique_id=869628459]
-script = ExtResource("1_q88xf")
+[node name="Pogoer" type="Node2D" unique_id=869628459]
+script = ExtResource("1_cwepv")
 
 [node name="Guy" type="CharacterBody2D" parent="." unique_id=55904794]
-script = ExtResource("2_665sb")
+script = ExtResource("2_8tnvx")
 
 [node name="Body" type="Sprite2D" parent="Guy" unique_id=1433233673]
 texture_filter = 1
 position = Vector2(-7, -2)
-texture = ExtResource("1_kr2ts")
+texture = ExtResource("3_5m2sa")
 
 [node name="HeadCollider" type="CollisionShape2D" parent="Guy" unique_id=705763443]
 position = Vector2(1, 12)
@@ -35,4 +35,4 @@ shape = SubResource("CircleShape2D_gwosq")
 z_index = -1
 texture_filter = 3
 position = Vector2(-7, 37)
-texture = ExtResource("2_q88xf")
+texture = ExtResource("4_hubrf")
