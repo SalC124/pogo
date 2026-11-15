@@ -1174,6 +1174,8 @@ position = Vector2(176, 414)
 [node name="TileMapLayer" type="TileMapLayer" parent="Match/Arena" unique_id=227156695]
 tile_set = SubResource("TileSet_j06ej")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Match/Arena" unique_id=1800425552]
-position = Vector2(535, 560)
+[node name="StaticBody2D" type="StaticBody2D" parent="Match/Arena" unique_id=2125726899]
+position = Vector2(565, 559)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Match/Arena/StaticBody2D" unique_id=1800425552]
 shape = SubResource("WorldBoundaryShape2D_gwosq")

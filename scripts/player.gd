@@ -2,6 +2,7 @@ extends Node2D
 
 @export var player_id: int = 1
 @export var facing_left: bool = true
+const gravity = -9.8
 
 const SCALE = 1.5
 
