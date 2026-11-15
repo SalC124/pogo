@@ -21,12 +21,12 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func spawn_pogoers() -> void:
 	var p1 = POGOER_SCENE.instantiate()
-	p1.position = Vector2(300,500)
+	p1.position = Vector2(300,200)
 	p1.init(1, false)
 	add_child(p1)
 	
 	var p2 = POGOER_SCENE.instantiate()
-	p2.position = Vector2(600, 500)
+	p2.position = Vector2(600, 200)
 	p2.init(2, true)
 	add_child(p2)
 	
