@@ -25,9 +25,13 @@ func _physics_process(delta: float) -> void:
 		velocity.y += GRAVITY * delta
 		
 		if tilt_input != 0:
-			angular_velocity += tilt_input * angular_acceleration * delta
+			angular_velocity += tilt_input * angular_acceleration*1.5 * delta
+			angular_velocity = clamp(angular_velocity, -10.0, 10.0)
 		else:
-			angular_velocity = move_toward(angular_velocity, 0.0, 8.0 * delta)
+			var return_spring = -rotation * 35.0 
+			angular_velocity += return_spring * delta
+			angular_velocity = move_toward(angular_velocity, 0.0, 25.0 * delta)
+			
 			
 		angular_velocity = clamp(angular_velocity, -18.0, 18.0)
 		rotation += angular_velocity * delta
