@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cbsu825royjf0"]
+
+[ext_resource type="Script" uid="uid://cg6blkmat6k6y" path="res://scripts/main_menu.gd" id="1_i4cec"]
+[ext_resource type="Script" uid="uid://do8ifmlgseqle" path="res://scripts/match_manager.gd" id="2_2dmjg"]
+
+[node name="Main" type="Node2D" unique_id=1606129600]
+
+[node name="MainMenu" type="Control" parent="." unique_id=196693844]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_i4cec")
+
+[node name="CharacterSelect" type="Control" parent="." unique_id=1676930761]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Match" type="Node2D" parent="." unique_id=1439834058]
+
+[node name="MatchManager" type="Node2D" parent="Match" unique_id=1832442470]
+script = ExtResource("2_2dmjg")
