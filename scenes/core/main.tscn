@@ -1139,7 +1139,10 @@ separation = Vector2i(1, 1)
 [sub_resource type="TileSet" id="TileSet_j06ej"]
 sources/0 = SubResource("TileSetAtlasSource_ebys2")
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_gwosq"]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_665sb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gwosq"]
+size = Vector2(20, 455)
 
 [node name="Main" type="Node2D" unique_id=1606129600]
 script = ExtResource("1_2dmjg")
@@ -1171,10 +1174,20 @@ position = Vector2(576, 324)
 [node name="TileMapLayer" type="TileMapLayer" parent="Match/Arena" unique_id=227156695]
 tile_set = SubResource("TileSet_j06ej")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Match/Arena" unique_id=2125726899]
+[node name="Floor" type="StaticBody2D" parent="Match/Arena" unique_id=2125726899]
 position = Vector2(565, 559)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Match/Arena/StaticBody2D" unique_id=1800425552]
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Match/Arena" unique_id=1800425552]
-position = Vector2(576, 560)
-shape = SubResource("WorldBoundaryShape2D_gwosq")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Match/Arena/Floor" unique_id=1800425552]
+shape = SubResource("WorldBoundaryShape2D_665sb")
+
+[node name="WallLeft" type="StaticBody2D" parent="Match/Arena" unique_id=428332722]
+position = Vector2(120, 350)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Match/Arena/WallLeft" unique_id=427316498]
+shape = SubResource("RectangleShape2D_gwosq")
+
+[node name="WallLeft" type="StaticBody2D" parent="Match/Arena/WallLeft" unique_id=1081793309]
+position = Vector2(892, -10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Match/Arena/WallLeft/WallLeft" unique_id=115858863]
+shape = SubResource("RectangleShape2D_gwosq")
