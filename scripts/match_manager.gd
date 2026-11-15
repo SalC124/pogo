@@ -12,15 +12,34 @@ func _ready() -> void:
 	$"../../MainMenu/PlayButton".connect("start_button_pressed", on_start_button_pressed)
 
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
 func _unhandled_input(event: InputEvent) -> void:
-	pass
+	if (game_started):
+		var p1_dir: int = 0
+		var p2_dir: int = 0
+
+		if (event.is_action_pressed("p1_left")):
+			p1_dir -= 1
+		if (event.is_action_pressed("p1_right")):
+			p1_dir += 1
+
+		if (event.is_action_pressed("p2_left")):
+			p2_dir += 1
+		if (event.is_action_pressed("p2_right")):
+			p2_dir -= 1
+
+
+		p1.get_child(0).tilt = p1_dir
+		p2.get_child(0).tilt = p2_dir
+
+		p1.get_child(0).charge = event.is_action_pressed("p1_charge")
+		p2.get_child(0).charge = event.is_action_pressed("p2_charge")
 
 func on_start_button_pressed() -> void:
-	print("PLEZSE (2)")
 	spawn_pogoers()
 
 	game_started = true
