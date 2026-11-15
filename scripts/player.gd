@@ -4,6 +4,8 @@ extends Node2D
 @export var facing_left: bool = true
 const gravity = -9.8
 
+@export var health: int = 100 # 0 to 100
+
 const SCALE = 1.5
 
 # Called when the node enters the scene tree for the first time.
