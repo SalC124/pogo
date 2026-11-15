@@ -1165,15 +1165,12 @@ script = ExtResource("2_2dmjg")
 
 [node name="Arena" type="Node2D" parent="Match" unique_id=2014774106]
 
-[node name="SpawnRight" type="Marker2D" parent="Match/Arena" unique_id=1400443018]
-position = Vector2(878, 413)
-
-[node name="SpawnLeft" type="Marker2D" parent="Match/Arena" unique_id=441996599]
-position = Vector2(176, 414)
+[node name="MiddleMiddle" type="Marker2D" parent="Match/Arena" unique_id=441996599]
+position = Vector2(576, 324)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Match/Arena" unique_id=227156695]
 tile_set = SubResource("TileSet_j06ej")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Match/Arena" unique_id=1800425552]
-position = Vector2(535, 560)
+position = Vector2(576, 560)
 shape = SubResource("WorldBoundaryShape2D_gwosq")
